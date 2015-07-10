@@ -27,8 +27,36 @@ npm install react-gandalf --save
 ```
 ## Example
 
+TODO: docs on propTypes for main component
+TODO: docs on what each step shape is
+
 ```js
-EXAMPLEHERE
+var Wizard = React.createClass({
+  render: function(){
+    var LoginStep = {
+      name: 'Login',
+      component: Login,
+      skippable: false
+    };
+    var AddFriendsStep = {
+      name: 'Add Friends',
+      component: AddFriends,
+      skippable: true
+    };
+    var FinishStep = {
+      name: 'Finish Setup',
+      component: FinishSetup,
+      skippable: false
+    };
+    return Gandalf({
+      steps: [
+        LoginStep,
+        AddFriendsStep,
+        FinishStep
+      ]
+    });
+  }
+});
 ```
 
 ## LICENSE

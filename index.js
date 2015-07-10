@@ -16,7 +16,12 @@ module.exports = React.createClass({
         skippable: PropTypes.bool,
         component: PropTypes.func
       })
-    )
+    ).isRequired
+  },
+  getDefaultProps: function(){
+    return {
+      allowBack: true
+    };
   },
   previousStep: function(){
     // TODO
