@@ -2,6 +2,7 @@
 
 var React = require('react');
 var merge = require('lodash.merge');
+var Multistep = require('react-multistep').Multistep
 
 var DOM = React.DOM;
 var PropTypes = React.PropTypes;
@@ -24,7 +25,7 @@ module.exports = React.createClass({
     };
   },
   previousStep: function(){
-    // TODO
+    this.refs.stepper.previous();
   },
   nextStep: function(){
     this.refs.stepper.next();
