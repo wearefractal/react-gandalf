@@ -2,26 +2,9 @@
   "name": "react-gandalf",
   "description": "React component for setup wizards and steps",
   "version": "0.0.1",
-  "homepage": "http://github.com/wearefractal/react-gandalf",
-  "repository": "git://github.com/wearefractal/react-gandalf.git",
   "author": "Fractal contact@wearefractal.com (http://wearefractal.com)",
-  "keywords": [
-    "css",
-    "react-component",
-    "react",
-    "mobile",
-    "wizard",
-    "setup",
-    "step",
-    "stepthrough",
-    "instruction",
-    "component"
-  ],
   "dependencies": {
     "lodash.merge": "^3.3.2"
-  },
-  "peerDependencies": {
-    "react": "^0.13.0"
   },
   "devDependencies": {
     "istanbul-coveralls": "^1.0.1",
@@ -31,19 +14,36 @@
     "mochify-istanbul": "^2.1.1",
     "should": "^7.0.0"
   },
-  "main": "./index.js",
-  "scripts": {
-    "lint": "jshint index.js lib --exclude node_modules --config .jshintrc --reporter node_modules/jshint-stylish/index.js",
-    "test": "npm run-script lint && mochify --recursive --reporter spec",
-    "coveralls": "mochify --recursive --plugin [ mochify-istanbul --exclude '**/+(test|node_modules)/**/*' --report lcov --dir ./coverage ] && istanbul-coveralls"
-  },
   "engines": {
     "node": ">= 0.10"
   },
+  "homepage": "http://github.com/wearefractal/react-gandalf",
+  "keywords": [
+    "component",
+    "css",
+    "instruction",
+    "mobile",
+    "react",
+    "react-component",
+    "setup",
+    "step",
+    "stepthrough",
+    "wizard"
+  ],
   "licenses": [
     {
       "type": "MIT",
       "url": "http://github.com/wearefractal/react-gandalf/raw/master/LICENSE"
     }
-  ]
+  ],
+  "main": "./index.js",
+  "peerDependencies": {
+    "react": "^0.13.0"
+  },
+  "repository": "git://github.com/wearefractal/react-gandalf.git",
+  "scripts": {
+    "coveralls": "mochify --recursive --plugin [ mochify-istanbul --exclude '**/+(test|node_modules)/**/*' --report lcov --dir ./coverage ] && istanbul-coveralls",
+    "lint": "jshint index.js lib --exclude node_modules --config .jshintrc --reporter node_modules/jshint-stylish/index.js",
+    "test": "npm run-script lint && mochify --recursive --reporter spec"
+  }
 }
