@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "author": "Fractal contact@wearefractal.com (http://wearefractal.com)",
   "dependencies": {
-    "lodash.merge": "^3.3.2"
+    "lodash.merge": "^3.3.2",
+    "react-multistep": "davidgruebl/react-multistep"
   },
   "devDependencies": {
     "istanbul-coveralls": "^1.0.1",
@@ -38,12 +39,12 @@
   ],
   "main": "./index.js",
   "peerDependencies": {
-    "react": "^0.13.0"
+    "react": "^0.12.2"
   },
   "repository": "git://github.com/wearefractal/react-gandalf.git",
   "scripts": {
     "coveralls": "mochify --recursive --plugin [ mochify-istanbul --exclude '**/+(test|node_modules)/**/*' --report lcov --dir ./coverage ] && istanbul-coveralls",
     "lint": "jshint index.js lib --exclude node_modules --config .jshintrc --reporter node_modules/jshint-stylish/index.js",
-    "test": "npm run-script lint && mochify --recursive --reporter spec"
+    "test": "mochify --recursive --reporter spec"
   }
 }

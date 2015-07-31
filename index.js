@@ -2,9 +2,8 @@
 
 var React = require('react');
 var merge = require('lodash.merge');
-var Multistep = require('react-multistep').Multistep
+var MultiStep = React.createFactory(require('react-multistep').Multistep);
 
-var DOM = React.DOM;
 var PropTypes = React.PropTypes;
 
 module.exports = React.createClass({
