@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var merge = require('lodash.merge');
+var defaults = require('lodash.defaults');
 var MultiStep = React.createFactory(require('react-multistep').Multistep);
 
 var PropTypes = React.PropTypes;
@@ -33,7 +33,7 @@ module.exports = React.createClass({
     return this.props.steps.map(transformStep, this);
   },
   render: function(){
-    var props = merge({
+    var props = defaults({
       ref: 'stepper',
       steps: this.getSteps()
     }, this.props);
@@ -44,11 +44,12 @@ module.exports = React.createClass({
 
 function transformStep(cfg){
   var goBack = this.props.allowBack ? this.previousStep : null;
+  var next = this.nextStep;
   return {
     name: cfg.name,
     component: cfg.component({
       skippable: cfg.skippable,
-      nextStep: this.nextStep,
+      nextStep: next,
       previousStep: goBack
     })
   };
