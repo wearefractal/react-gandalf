@@ -51,9 +51,7 @@ describe('Gandalf()', function() {
 
     done();
   });
-});
 
-describe('Gandalf()', function() {
   it('should be possible to call previousStep from Step1', function(done) {
     var Step1 = {
       name: 'TestStep1',
@@ -76,9 +74,7 @@ describe('Gandalf()', function() {
 
     done();
   });
-});
 
-describe('Gandalf()', function() {
   it('should be possible to call nextStep from last step', function(done) {
     var Step1 = {
       name: 'TestStep1',
