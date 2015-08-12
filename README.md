@@ -27,9 +27,6 @@ npm install react-gandalf --save
 ```
 ## Example
 
-TODO: docs on propTypes for main component
-TODO: docs on what each step shape is
-
 ```js
 var Wizard = React.createClass({
   render: function(){
@@ -57,6 +54,23 @@ var Wizard = React.createClass({
     });
   }
 });
+```
+
+```js
+var Login = React.createClass({
+  PropTypes: {
+    nextStep: PropTypes.func,
+    previousStep: PropTypes.func
+  }
+  render: function() {
+    return DOM.div({className: 'first'}, 
+      DOM.button({
+        className: 'button',
+        onClick: this.props.nextStep
+      }, 'Next'));
+  }
+})
+
 ```
 
 ## LICENSE
