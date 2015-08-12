@@ -1,7 +1,7 @@
 {
   "name": "react-gandalf",
   "description": "React component for setup wizards and steps",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Fractal contact@wearefractal.com (http://wearefractal.com)",
   "dependencies": {
     "lodash.defaults": "^3.1.2",
